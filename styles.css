@@ -46,3 +46,6 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
 .award-badge{display:inline-flex;margin:7px 0 4px;padding:6px 10px;color:var(--blue);background:var(--blue-soft);border:1px solid #c9dce7;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.04em}
 .recognition-grid .award-card{position:relative;overflow:hidden;background:white;border-color:#b9d3e1}.award-card::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--blue)}.award-card h3{font-size:28px}.award-card blockquote{margin:18px 0;padding:0 0 0 16px;color:var(--navy);border-left:2px solid var(--blue);font:italic 19px/1.4 var(--serif)}.award-emphasis{margin:24px 0;padding:20px;background:var(--navy);color:white}.award-emphasis strong{display:block;font:400 34px/1.05 var(--serif)}.award-emphasis span{display:block;margin-top:6px;color:#c9dce7;font-size:11px;letter-spacing:.06em;text-transform:uppercase}.award-card>p:last-child{margin-bottom:0}
 @media(max-width:620px){.award-card h3{font-size:25px}.award-emphasis strong{font-size:30px}}
+
+.hero-bio-button{margin:24px 12px 0 20px;background:white}
+@media(max-width:620px){.hero-bio-button{margin:22px 0 0}}
