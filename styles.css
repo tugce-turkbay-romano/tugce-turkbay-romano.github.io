@@ -45,7 +45,7 @@ h3 { line-height: 1.25; letter-spacing: -.02em; }
 .button-secondary:hover { background: var(--ice); }
 .status-note { min-height: 24px; margin: 10px 0 0; color: var(--ink-muted); font-size: .85rem; opacity: 0; transition: opacity .2s; }
 .status-note.visible { opacity: 1; }
-.portrait-panel { order: 1; justify-self: start; width: min(100%, 285px); }
+.portrait-panel { order: 1; justify-self: start; width: min(100%, 205px); }
 .portrait-frame { position: relative; padding: 16px 0 0 16px; }
 .portrait-frame::before { content: ""; position: absolute; inset: 0 16px 16px 0; background: var(--blue-light); }
 .portrait-frame img { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%; }
