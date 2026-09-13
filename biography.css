@@ -1,0 +1,32 @@
+.profile-meta{margin:18px 0 0;color:var(--blue);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.snapshot{background:var(--navy);color:white}
+.snapshot-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.snapshot article{min-height:125px;padding:28px 22px;border-right:1px solid rgba(255,255,255,.17)}
+.snapshot article:first-child{padding-left:0}
+.snapshot article:last-child{border-right:0}
+.snapshot strong{display:block;font:400 27px/1.1 var(--serif)}
+.snapshot span{display:block;margin-top:9px;color:#bfd2dd;font-size:11px}
+.balanced-recognition{grid-template-columns:1fr 1fr}
+.balanced-recognition article{min-height:430px;background:var(--soft)}
+.cnu-sections{margin-top:27px}
+.cnu-sections>div{display:grid;grid-template-columns:60px 1fr;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+.cnu-sections strong{color:var(--blue);font:400 31px var(--serif)}
+.cnu-sections span{color:var(--muted);font-size:12px}
+.teaching-number strong{display:block;color:var(--blue);font:400 58px/1 var(--serif)}
+.teaching-number span{display:block;margin-top:7px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.teaching-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.teaching-groups article{padding:27px;background:white}
+.teaching-groups h3,.focused-expertise h3{margin-bottom:12px;font:400 24px var(--serif)}
+.teaching-groups p,.focused-expertise p{margin:0;color:var(--muted);font-size:13px}
+.focused-expertise{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.focused-expertise article{padding:30px;background:white}
+.technical-tools{margin:18px 0 0;padding:17px 20px;color:var(--muted);background:var(--soft);border:1px solid var(--line);font-size:12px}
+.technical-tools strong{color:var(--navy)}
+.minimal-publications{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.minimal-publications li{display:grid;grid-template-columns:85px 1fr;gap:25px;padding:24px 0;border-bottom:1px solid var(--line)}
+.minimal-publications time{color:var(--blue);font-weight:600}
+.minimal-publications h3{max-width:850px;margin:0 0 5px;font:400 22px/1.25 var(--serif)}
+.minimal-publications p{margin:0;color:var(--muted);font-size:13px}
+.minimal-publications a{display:inline-block;margin-top:8px;color:var(--blue);font-size:12px;font-weight:600}
+@media(max-width:900px){.snapshot-grid{grid-template-columns:1fr 1fr}.snapshot article:nth-child(2){border-right:0}.balanced-recognition{grid-template-columns:1fr}.balanced-recognition article{min-height:auto}.teaching-groups{grid-template-columns:1fr}.focused-expertise{grid-template-columns:1fr}}
+@media(max-width:620px){.snapshot-grid{grid-template-columns:1fr}.snapshot article,.snapshot article:first-child{min-height:auto;padding:20px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}.snapshot article:last-child{border-bottom:0}.minimal-publications li{grid-template-columns:1fr;gap:5px}}
