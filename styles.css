@@ -33,3 +33,5 @@
 #capabilities{border-bottom:0}.compact-heading{grid-template-columns:1fr 1fr;margin-bottom:26px}.compact-heading .eyebrow{margin-bottom:0}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-profile{max-width:650px;margin-bottom:48px}.assessment-cards{grid-template-columns:1fr}.assessment-cards h3{min-height:auto}.secondary-projects{grid-template-columns:1fr}}
 @media(max-width:620px){.hero-profile{padding-left:0;border-left:0;border-top:2px solid var(--blue)}.profile-heading{grid-template-columns:1fr 92px;padding:16px 0}.profile-heading img{width:86px;height:86px}.hero-profile>p{margin-inline:0}.research-line{align-items:stretch;flex-direction:column}.research-line i{transform:rotate(90deg);text-align:center}.compact-heading{grid-template-columns:1fr}}
+/* Condensed research agenda */
+.agenda-steps article{min-height:225px}.agenda-steps h3{margin-top:34px}.agenda-methods{margin-top:18px;padding:24px;background:white;border:1px solid var(--line)}.agenda-methods p:last-child{margin:0;color:var(--muted)}
