@@ -66,3 +66,8 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
 .modularity-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
 .modularity-figure{width:100%}
 @media(max-width:900px){.modularity-layout{grid-template-columns:1fr}}
+
+/* Transparent modularity figure on a harmonized transition panel */
+.modularity-figure{padding:18px;background:linear-gradient(145deg,#1b4652 0%,#123342 55%,#0f2b39 100%);border:1px solid rgba(143,194,221,.28);box-shadow:0 18px 40px rgba(4,18,27,.2)}
+.modularity-figure img{filter:drop-shadow(0 10px 18px rgba(0,0,0,.18))}
+.modularity-figure figcaption{padding:12px 4px 2px;color:#c9dce7;border-top:1px solid rgba(255,255,255,.12)}
