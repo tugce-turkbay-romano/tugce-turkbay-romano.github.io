@@ -1,7 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Academic Profile</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --soft: #f5f7f7;
+      --text: #172222;
+      --muted: #657171;
+      --accent: #075e62;
+      --accent-dark: #03484b;
+      --border: #dce3e3;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .shell {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section.shell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .soft {
+      background: var(--soft);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      max-width: 760px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    /* HERO */
+
+    .bio-hero {
+      padding: 100px 0 90px;
+      border-top: 8px solid var(--accent);
+    }
+
+    .bio-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .lead {
+      margin: 0;
+      color: #465454;
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+
+    /* SNAPSHOT */
+
+    .snapshot {
+      background: var(--accent);
+      color: white;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .snapshot article {
+      padding: 32px 26px;
+      border-right: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .snapshot article:last-child {
+      border-right: 0;
+    }
+
+    .snapshot strong,
+    .snapshot span {
+      display: block;
+    }
+
+    .snapshot strong {
+      margin-bottom: 5px;
+      font-size: 1.15rem;
+    }
+
+    .snapshot span {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* SECTION HEADINGS */
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    /* RECOGNITION */
+
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .national-card,
+    .award-card {
+      padding: 36px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: white;
+    }
+
+    .card-label {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .national-card h3,
+    .award-card h3 {
+      margin-bottom: 28px;
+      font-size: 1.5rem;
+    }
+
+    .cnu-sections {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .cnu-sections > div {
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cnu-sections strong {
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    .award-emphasis {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      margin-bottom: 24px;
+      background: var(--soft);
+      border-radius: 10px;
+    }
+
+    .award-emphasis strong {
+      color: var(--accent-dark);
+      font-size: 1.3rem;
+    }
+
+    .award-emphasis span {
+      color: var(--muted);
+    }
+
+    blockquote {
+      margin: 0 0 25px;
+      padding-left: 20px;
+      border-left: 3px solid var(--accent);
+      color: #455252;
+      font-style: italic;
+    }
+
+    .thesis-doi {
+      margin: 0;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .thesis-doi strong {
+      color: var(--text);
+    }
+
+    .thesis-link {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* TEACHING */
+
+    .teaching-number {
+      text-align: right;
+      max-width: 350px;
+    }
+
+    .teaching-number strong,
+    .teaching-number span {
+      display: block;
+    }
+
+    .teaching-number strong {
+      color: var(--accent);
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .teaching-number span {
+      color: var(--muted);
+    }
+
+    .teaching-groups {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .teaching-groups article {
+      padding-top: 22px;
+      border-top: 2px solid var(--accent);
+    }
+
+    .teaching-groups h3 {
+      margin-bottom: 10px;
+    }
+
+    .teaching-groups p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    /* EXPERTISE */
+
+    .focused-expertise {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .focused-expertise article {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .focused-expertise p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .technical-tools {
+      margin: 28px 0 0;
+      color: var(--muted);
+    }
+
+    .technical-tools strong {
+      color: var(--text);
+    }
+
+    /* PUBLICATIONS */
+
+    .minimal-publications {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .minimal-publications li {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 30px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .minimal-publications time {
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .minimal-publications h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .minimal-publications p {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .minimal-publications a {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    /* BUTTONS */
+
+    .research-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.93rem;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: white;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button-secondary {
+      color: var(--accent);
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--accent);
+    }
+
+    .button.unavailable {
+      color: #8b9696;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .bio-hero-grid,
+      .recognition-grid,
+      .focused-expertise {
+        grid-template-columns: 1fr;
+      }
+
+      .bio-hero-grid {
+        gap: 35px;
+      }
+
+      .snapshot-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .teaching-groups {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .teaching-number {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .shell {
+        width: min(100% - 30px, var(--max-width));
+      }
+
+      .bio-hero {
+        padding: 65px 0 60px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .snapshot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .snapshot article {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.18);
+      }
+
+      .minimal-publications li {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .national-card,
+      .award-card {
+        padding: 25px;
+      }
+
+      .research-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
 <main id="main">
 
   <section class="bio-hero">
     <div class="shell bio-hero-grid">
+
       <div>
         <p class="eyebrow">Academic Profile</p>
         <h1>Engineering research for circular electronics</h1>
@@ -14,10 +515,13 @@
           in repairability, disassemblability and value retention.
         </p>
       </div>
+
     </div>
   </section>
 
+
   <section class="snapshot" aria-label="Academic profile highlights">
+
     <div class="shell snapshot-grid">
 
       <article>
@@ -41,7 +545,9 @@
       </article>
 
     </div>
+
   </section>
+
 
   <section id="qualifications" class="section shell">
 
@@ -52,10 +558,14 @@
       </div>
     </header>
 
-    <div class="recognition-grid balanced-recognition">
+
+    <div class="recognition-grid">
 
       <article class="national-card">
-        <p class="card-label">National qualification · CNU · 2025</p>
+
+        <p class="card-label">
+          National qualification · CNU · 2025
+        </p>
 
         <h3>
           French National Qualification for Associate Professorship
@@ -83,13 +593,19 @@
           </div>
 
         </div>
+
       </article>
+
 
       <article class="award-card">
 
-        <p class="card-label">PhD Thesis Award</p>
+        <p class="card-label">
+          PhD Thesis Award
+        </p>
 
-        <h3>EEATS Doctoral School</h3>
+        <h3>
+          EEATS Doctoral School
+        </h3>
 
         <div class="award-emphasis">
           <strong>Selected among 128</strong>
@@ -97,18 +613,12 @@
         </div>
 
         <blockquote>
-          “Analysis and Decision Support of Circular Economy Strategies in Power Electronics”
+          “Analysis and Decision Support of Circular Economy Strategies
+          in Power Electronics”
         </blockquote>
 
         <p class="thesis-doi">
-          <a
-            class="thesis-link"
-            href="https://doi.org/10.70675/74891b76z425cz4fc8z97c7ze5f4c86a3d19"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View doctoral thesis ↗
-          </a>
+          <strong>View doctoral thesis ↗</strong>
           →
           <a
             class="thesis-link"
@@ -123,15 +633,20 @@
       </article>
 
     </div>
+
   </section>
 
+
   <section id="teaching" class="section soft">
+
     <div class="shell">
 
       <header class="section-heading">
 
         <div>
-          <p class="eyebrow">02 · Teaching &amp; Knowledge Transfer</p>
+          <p class="eyebrow">
+            02 · Teaching &amp; Knowledge Transfer
+          </p>
           <h2>Engineering education</h2>
         </div>
 
@@ -143,6 +658,7 @@
         </div>
 
       </header>
+
 
       <div class="teaching-groups">
 
@@ -170,16 +686,21 @@
       </div>
 
     </div>
+
   </section>
+
 
   <section id="expertise" class="section shell">
 
     <header class="section-heading">
       <div>
-        <p class="eyebrow">03 · Methods &amp; Expertise</p>
+        <p class="eyebrow">
+          03 · Methods &amp; Expertise
+        </p>
         <h2>Research capabilities</h2>
       </div>
     </header>
+
 
     <div class="focused-expertise">
 
@@ -201,6 +722,7 @@
 
     </div>
 
+
     <p class="technical-tools">
       <strong>Technical tools:</strong>
       Python · MATLAB · SimaPro · ANSYS
@@ -208,19 +730,25 @@
 
   </section>
 
+
   <section id="publications" class="section soft">
+
     <div class="shell">
 
       <header class="section-heading">
         <div>
-          <p class="eyebrow">04 · Selected Research</p>
+          <p class="eyebrow">
+            04 · Selected Research
+          </p>
           <h2>Flagship publications</h2>
         </div>
       </header>
 
+
       <ol class="minimal-publications">
 
         <li>
+
           <time>2026</time>
 
           <div>
@@ -241,9 +769,12 @@
               View DOI ↗
             </a>
           </div>
+
         </li>
 
+
         <li>
+
           <time>2024</time>
 
           <div>
@@ -264,14 +795,18 @@
               View DOI ↗
             </a>
           </div>
+
         </li>
 
+
         <li>
+
           <time>2023</time>
 
           <div>
             <h3>
-              Towards Circular Power Electronics in the Perspective of Modularity
+              Towards Circular Power Electronics in the Perspective
+              of Modularity
             </h3>
 
             <p>
@@ -286,9 +821,11 @@
               View DOI ↗
             </a>
           </div>
+
         </li>
 
       </ol>
+
 
       <div class="research-actions">
 
@@ -314,7 +851,6 @@
           class="button button-secondary unavailable"
           href="#"
           aria-disabled="true"
-          title="CV will be available soon"
         >
           Download CV →
         </a>
@@ -322,6 +858,10 @@
       </div>
 
     </div>
+
   </section>
 
 </main>
+
+</body>
+</html>
