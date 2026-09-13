@@ -40,3 +40,8 @@
 .biography-page .bio-hero h1{max-width:590px;font-size:clamp(42px,4.7vw,64px);line-height:1.02}
 .biography-page .bio-hero .lead{max-width:560px;font-size:clamp(19px,1.85vw,25px);line-height:1.42}
 @media(max-width:620px){.biography-page .bio-hero{padding:44px 0}.biography-page .bio-hero h1{font-size:40px}.biography-page .bio-hero .lead{font-size:19px}}
+
+/* Align qualification cards */
+.balanced-recognition .national-card{position:relative;overflow:hidden;background:white;border-color:#b9d3e1}
+.balanced-recognition .national-card::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--blue)}
+.balanced-recognition .national-card,.balanced-recognition .award-card{padding:28px}
