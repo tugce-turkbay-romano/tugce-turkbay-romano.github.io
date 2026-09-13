@@ -30,3 +30,6 @@
 .minimal-publications a{display:inline-block;margin-top:8px;color:var(--blue);font-size:12px;font-weight:600}
 @media(max-width:900px){.snapshot-grid{grid-template-columns:1fr 1fr}.snapshot article:nth-child(2){border-right:0}.balanced-recognition{grid-template-columns:1fr}.balanced-recognition article{min-height:auto}.teaching-groups{grid-template-columns:1fr}.focused-expertise{grid-template-columns:1fr}}
 @media(max-width:620px){.snapshot-grid{grid-template-columns:1fr}.snapshot article,.snapshot article:first-child{min-height:auto;padding:20px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}.snapshot article:last-child{border-bottom:0}.minimal-publications li{grid-template-columns:1fr;gap:5px}}
+
+.research-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.research-actions .button{margin-top:0}
+@media(max-width:620px){.research-actions{align-items:stretch;flex-direction:column}.research-actions .button{width:100%}}
