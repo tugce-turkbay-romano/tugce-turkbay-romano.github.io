@@ -20,8 +20,4 @@ cvButton.addEventListener('click', () => {
   cvNote.textContent = 'CV PDF will be available here soon.';
 });
 
-document.querySelector('.notify-button').addEventListener('click', (event) => {
-  event.currentTarget.textContent = 'In preparation';
-});
-
 document.querySelector('#year').textContent = new Date().getFullYear();
