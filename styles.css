@@ -74,3 +74,8 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
 
 /* Transparent modularity artwork */
 .modularity-figure{padding:0;background:transparent;border:0;box-shadow:none}.modularity-figure img{filter:none}.modularity-figure figcaption{margin-top:8px;padding:10px 0 0;color:#bcd0da;border-top:1px solid rgba(255,255,255,.14)}
+
+/* Full-width modularity conclusion */
+.assessment-cards .modularity-card{display:block}
+.modularity-card .modularity-takeaway{width:100%;max-width:none;margin:24px 0 0;padding:16px 18px}
+.assessment-cards .modularity-card>.modularity-source{display:inline-block;margin-top:14px;padding-top:0;color:#9ccce5;font-size:12px;font-weight:600}
