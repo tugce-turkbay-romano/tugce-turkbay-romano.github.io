@@ -33,3 +33,10 @@
 
 .research-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.research-actions .button{margin-top:0}
 @media(max-width:620px){.research-actions{align-items:stretch;flex-direction:column}.research-actions .button{width:100%}}
+
+/* More compact academic-profile hero */
+.biography-page .bio-hero{padding:clamp(52px,6vw,78px) 0}
+.biography-page .bio-hero-grid{gap:56px}
+.biography-page .bio-hero h1{max-width:590px;font-size:clamp(42px,4.7vw,64px);line-height:1.02}
+.biography-page .bio-hero .lead{max-width:560px;font-size:clamp(19px,1.85vw,25px);line-height:1.42}
+@media(max-width:620px){.biography-page .bio-hero{padding:44px 0}.biography-page .bio-hero h1{font-size:40px}.biography-page .bio-hero .lead{font-size:19px}}
