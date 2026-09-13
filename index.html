@@ -25,7 +25,7 @@
 <header class="site-header">
   <a class="brand" href="#top" aria-label="Tugce Turkbay-Romano, home"><span class="brand-mark" aria-hidden="true">T</span><span><strong>Tugce Turkbay-Romano</strong><small>Circular Economy &amp; Sustainable Electronics Researcher</small></span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-  <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a href="#agenda">Research</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#capabilities">Capabilities</a><a href="#teaching">Teaching</a><a href="#qualifications">Qualifications</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a href="#agenda">Research</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#teaching">Teaching</a><a href="#qualifications">Qualifications</a><a href="#capabilities">Capabilities</a></nav>
 </header>
 
 <main id="main">
@@ -37,7 +37,14 @@
         <p class="hero-contribution">I develop indicators and decision-support methods that translate engineering data on repairability, disassembly, lifetime and residual value into actionable circular strategies and measurable sustainability performance.</p>
         <div class="hero-actions"><a class="button button-primary" href="#agenda">Explore my research</a><a class="button button-secondary" href="#publications">View publications</a><a class="button button-secondary unavailable" href="#" aria-disabled="true" title="CV will be available soon">Download CV</a></div>
       </div>
-      <aside class="mission"><p>Circular Economy &amp; Sustainable Electronics Researcher</p><span>PhD IN ELECTRICAL ENGINEERING</span></aside>
+      <aside class="hero-profile">
+        <div class="profile-heading">
+          <div><p>Circular Economy &amp; Sustainable Electronics Researcher</p><span>PhD IN ELECTRICAL ENGINEERING</span></div>
+          <img src="assets/profile-small.jpg" alt="Portrait of Tugce Turkbay-Romano" width="480" height="480">
+        </div>
+        <p>My multidisciplinary background spans automotive engineering, battery thermal management, industrial engineering and electrical engineering, enabling me to approach circularity challenges from technical, systems and decision-making perspectives.</p>
+        <p>I hold a PhD in Electrical Engineering from Université Grenoble Alpes. My work combines engineering analysis, life-cycle thinking, decision-support methods and product information.</p>
+      </aside>
     </div>
   </section>
 
@@ -91,27 +98,39 @@
 
   <section id="projects" class="section dark">
     <div class="shell">
-      <header class="section-heading"><div><p class="eyebrow">03 · Projects &amp; evidence</p><h2>From research problem to decision relevance</h2></div><p>Each project states the problem, method, current evidence, contribution and practical decision context.</p></header>
-      <div class="evidence-projects">
-        <article class="featured-project">
-          <p class="project-type">Interactive research demonstrator</p><h3>Interactive IDEF0–GRAI Decision-Support Model</h3>
-          <dl><div><dt>Problem</dt><dd>Static systems models are difficult to navigate and apply in operational circular-management decisions.</dd></div><div><dt>Method</dt><dd>Hierarchical IDEF0 process modelling combined with GRAI decision modelling.</dd></div><div><dt>Evidence</dt><dd>Research demonstrator based on structured process, decision and information-flow models; public empirical validation has not yet been reported.</dd></div><div><dt>Contribution</dt><dd>A navigable environment connecting product information, decision levels and circular actions.</dd></div><div><dt>Decision relevance</dt><dd>Supports exploration of end-of-use options and responsibilities across a circular decision system.</dd></div></dl>
-          <p class="output-note"><strong>Practical output:</strong> interactive prototype. Deployment link will be added when public.</p><a class="button button-light unavailable" href="#" aria-disabled="true">Explore interactive model</a>
+      <header class="section-heading"><div><p class="eyebrow">03 · Projects &amp; evidence</p><h2>Two complementary assessment methods</h2></div><p>Disassemblability and repairability are treated as related but distinct engineering capabilities, each connected to measurable design requirements and operational decisions.</p></header>
+      <div class="assessment-cards">
+        <article>
+          <p class="project-type">Disassemblability assessment</p>
+          <h3>Disassemblability of Power Electronic Converters</h3>
+          <dl>
+            <div><dt>Problem</dt><dd>Existing disassembly metrics do not adequately capture PCB-level operations, including component removal and desoldering.</dd></div>
+            <div><dt>Method</dt><dd>Experimental disassembly analysis and adaptation of the ease of Disassembly Metric (eDiM) to PCB-based power electronic converters.</dd></div>
+            <div><dt>Evidence</dt><dd>Application to a power electronic converter, including component-level disassembly sequences and connection technologies.</dd></div>
+            <div><dt>Contribution</dt><dd>A PCB-based disassemblability assessment method with quantifiable requirements for circular product design.</dd></div>
+            <div><dt>Decision relevance</dt><dd>Supports connection-technology selection, product redesign, repair, refurbishment and remanufacturing decisions.</dd></div>
+          </dl>
+          <p class="card-insight">The method adapts eDiM to PCB-level operations so designers can formulate measurable disassemblability requirements.</p>
+          <a href="https://www.mdpi.com/2071-1050/16/11/4712" target="_blank" rel="noopener noreferrer">View published research ↗</a>
         </article>
-        <article><p class="project-type">Strategy selection</p><h3>Circular Economy Strategy Selection for End-of-Use Electronics</h3><dl><div><dt>Problem</dt><dd>End-of-use strategies involve competing technical, environmental and organizational criteria.</dd></div><div><dt>Method</dt><dd>Decision-support structuring and multicriteria comparison of circular alternatives.</dd></div><div><dt>Evidence</dt><dd>Model-based research framework; case-study and validation details will be linked when publicly available.</dd></div><div><dt>Contribution</dt><dd>A transparent structure for comparing repair, reuse, refurbishment, remanufacturing and recovery pathways.</dd></div><div><dt>Decision relevance</dt><dd>Supports consistent strategy selection rather than ad hoc end-of-use decisions.</dd></div></dl></article>
-        <article><p class="project-type">Product assessment</p><h3>Repairability and Disassemblability Assessment</h3><dl><div><dt>Problem</dt><dd>Generic scores can lack sufficient technical discrimination for engineering decisions.</dd></div><div><dt>Method</dt><dd>Component-level assessment and multicriteria modelling.</dd></div><div><dt>Evidence</dt><dd>PCB and power-converter case studies, sensitivity analysis and peer-reviewed publication.</dd></div><div><dt>Contribution</dt><dd>A technically usable repairability index and structured disassemblability assessment.</dd></div><div><dt>Decision relevance</dt><dd>Supports repair, redesign and end-of-use decisions.</dd></div></dl><a href="https://doi.org/10.1007/s13243-026-00165-2" target="_blank" rel="noopener noreferrer">Published evidence ↗</a></article>
-        <article><p class="project-type">Value &amp; performance</p><h3>Residual Value Assessment for Circular Electronics</h3><dl><div><dt>Problem</dt><dd>Technical condition alone does not capture the retained value or feasible next use of a product.</dd></div><div><dt>Method</dt><dd>Indicators combining technical condition, functional performance, market value, environmental considerations and end-of-use options.</dd></div><div><dt>Evidence</dt><dd>Methodological framework under development; empirical validation and datasets will be reported when available.</dd></div><div><dt>Contribution</dt><dd>A bridge between electronics engineering, circularity measurement and sustainability-performance frameworks.</dd></div><div><dt>Decision relevance</dt><dd>Supports value-retention, investment and circular-strategy decisions.</dd></div></dl></article>
+        <article>
+          <p class="project-type">Repairability assessment</p>
+          <h3>Repairability Index for PCB Electronic Circuits</h3>
+          <dl>
+            <div><dt>Problem</dt><dd>Aggregated repairability scores can conceal critical repair barriers and commonly treat the PCB as a replaceable unit rather than a repairable system.</dd></div>
+            <div><dt>Method</dt><dd>Repair-workflow modelling, analysis of existing indices, interviews with eight repair experts and a weighting survey involving 50 electronics and eco-design experts.</dd></div>
+            <div><dt>Evidence</dt><dd>Five weighted assessment categories, two PCB case studies and an open-access Excel assessment tool.</dd></div>
+            <div><dt>Contribution</dt><dd>A technically grounded PCB repairability index with warning indicators that prevent critical barriers from being hidden by the overall score.</dd></div>
+            <div><dt>Decision relevance</dt><dd>Helps repair professionals evaluate feasibility and identify bottlenecks while providing actionable eco-design feedback to manufacturers.</dd></div>
+          </dl>
+          <p class="card-insight">Five criteria—traceability, design features, disassembly/reassembly, diagnostics and spare parts—are complemented by warning indicators for critical barriers.</p>
+          <a href="https://link.springer.com/article/10.1007/s13243-026-00165-2" target="_blank" rel="noopener noreferrer">View published research ↗</a>
+        </article>
       </div>
-    </div>
-  </section>
-
-  <section id="capabilities" class="section soft">
-    <div class="shell">
-      <header class="section-heading compact-heading"><div><p class="eyebrow">04 · Analytical capabilities</p></div><p>Capabilities supporting research from engineering evidence to organizational circular-economy decisions.</p></header>
-      <div class="skills-grid">
-        <article><h3>Research &amp; Modelling</h3><ul><li>Circular economy assessment</li><li>Decision-support methodologies</li><li>Multicriteria analysis</li><li>Model-Based Systems Engineering (MBSE)</li><li>IDEF0</li><li>GRAI Nets</li><li>Life Cycle Assessment</li></ul></article>
-        <article><h3>Data &amp; Engineering Tools</h3><ul><li>Python</li><li>MATLAB</li><li>SimaPro</li><li>ANSYS</li><li>CATIA</li><li>AutoCAD</li><li>ParaView</li><li>Inkscape</li></ul></article>
-        <article><h3>Product &amp; Sustainability Topics</h3><ul><li>Repairability</li><li>Disassemblability</li><li>Residual value</li><li>Eco-design</li><li>Modular design</li><li>Remanufacturing</li><li>Digital Product Passport</li></ul></article>
+      <div class="research-line" aria-label="Research progression"><span>Disassembly operations</span><i>→</i><span>Repair feasibility</span><i>→</i><span>Design feedback</span><i>→</i><span>Circular strategy</span></div>
+      <div class="secondary-projects">
+        <article><p class="project-type">Strategy selection</p><h3>Circular Economy Strategy Selection for End-of-Use Electronics</h3><p>A structured decision-support approach for comparing repair, reuse, refurbishment, remanufacturing and recovery pathways.</p></article>
+        <article><p class="project-type">Value &amp; performance</p><h3>Residual Value Assessment for Circular Electronics</h3><p>Indicators combining technical condition, functional performance, market value, environmental considerations and end-of-use options to support circular decision-making.</p></article>
       </div>
     </div>
   </section>
@@ -132,17 +151,16 @@
     </div>
   </section>
 
-  <section id="about" class="section shell about-reordered">
-    <div class="about-photo"><p class="eyebrow">07 · Biography</p><img class="portrait" src="assets/profile-small.jpg" alt="Portrait of Tugce Turkbay-Romano" width="480" height="480"></div>
-    <div class="prose">
-      <p class="lead">I am a researcher working at the intersection of electrical engineering, circular economy and sustainable product design.</p>
-      <p>My multidisciplinary background spans automotive engineering, battery thermal management, industrial engineering and electrical engineering, enabling me to approach circularity challenges from technical, systems and decision-making perspectives.</p>
-      <p>I hold a PhD in Electrical Engineering from Université Grenoble Alpes. My work combines engineering analysis, life-cycle thinking, decision-support methods and product information.</p>
-      <p class="role"><strong>Previous position:</strong> Research Engineer — G2Elab, Grenoble · February 2025–January 2026<br><strong>Current professional status:</strong> Open to research collaboration and university opportunities; no current institutional affiliation stated.</p>
+  <section id="capabilities" class="section soft">
+    <div class="shell">
+      <header class="section-heading compact-heading"><div><p class="eyebrow">04 · Analytical capabilities</p></div><p>Capabilities supporting research from engineering evidence to organizational circular-economy decisions.</p></header>
+      <div class="skills-grid">
+        <article><h3>Research &amp; Modelling</h3><ul><li>Circular economy assessment</li><li>Decision-support methodologies</li><li>Multicriteria analysis</li><li>Model-Based Systems Engineering (MBSE)</li><li>IDEF0</li><li>GRAI Nets</li><li>Life Cycle Assessment</li></ul></article>
+        <article><h3>Data &amp; Engineering Tools</h3><ul><li>Python</li><li>MATLAB</li><li>SimaPro</li><li>ANSYS</li><li>CATIA</li><li>AutoCAD</li><li>ParaView</li><li>Inkscape</li></ul></article>
+        <article><h3>Product &amp; Sustainability Topics</h3><ul><li>Repairability</li><li>Disassemblability</li><li>Residual value</li><li>Eco-design</li><li>Modular design</li><li>Remanufacturing</li><li>Digital Product Passport</li></ul></article>
+      </div>
     </div>
   </section>
-
-  <section id="contact" class="section soft"><div class="shell contact"><div><p class="eyebrow">08 · Contact</p><h2>Let’s connect.</h2></div><div><p class="lead">I welcome interdisciplinary collaborations and university opportunities in circular economy, sustainable electronics and sustainability performance.</p><div class="links"><a href="https://github.com/tugce-turkbay-romano" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://scholar.google.com/citations?user=WnppTk0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="https://orcid.org/0000-0001-7263-9741" target="_blank" rel="noopener noreferrer">ORCID ↗</a></div></div></div></section>
 </main>
 <footer><div class="shell"><strong>Tugce Turkbay-Romano</strong><p>© <span id="year"></span> · Circular Economy &amp; Sustainable Electronics Researcher</p><a href="#top">Back to top ↑</a></div></footer>
 <script src="script.js"></script>
