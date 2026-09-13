@@ -61,3 +61,8 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
 /* Modularity research figure */
 .modularity-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:34px;align-items:start}.modularity-copy{min-width:0}.modularity-figure{position:sticky;top:100px;margin:0;padding:10px;background:white}.modularity-figure img{display:block;width:100%;height:auto}.modularity-figure figcaption{padding:10px 4px 2px;color:#536874;font-size:10px;line-height:1.45}.assessment-cards .modularity-copy>a{display:inline-block;margin-top:20px;color:#9ccce5;font-size:12px;font-weight:600}
 @media(max-width:900px){.modularity-layout{grid-template-columns:1fr}.modularity-figure{position:static;order:2;max-width:720px}}
+
+/* Equal modularity columns */
+.modularity-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.modularity-figure{width:100%}
+@media(max-width:900px){.modularity-layout{grid-template-columns:1fr}}
