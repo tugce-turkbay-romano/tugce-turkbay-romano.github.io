@@ -79,3 +79,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
 .assessment-cards .modularity-card{display:block}
 .modularity-card .modularity-takeaway{width:100%;max-width:none;margin:24px 0 0;padding:16px 18px}
 .assessment-cards .modularity-card>.modularity-source{display:inline-block;margin-top:14px;padding-top:0;color:#9ccce5;font-size:12px;font-weight:600}
+
+/* Circular modularity bibliographic reference */
+.modularity-card .project-reference{margin:16px 0 0;color:#cbd9e0;font-size:11px;line-height:1.55}
+.modularity-card .project-reference a{color:#9ccce5}
