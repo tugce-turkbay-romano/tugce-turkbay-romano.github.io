@@ -674,3 +674,27 @@ blockquote{
   box-shadow:0 6px 16px rgba(23,107,135,.16);
 }
 .award-card .card-label::before{display:none}
+
+/* Award title as the primary card heading */
+.award-card .award-title{
+  margin:0 0 22px;
+  padding:15px 18px;
+  color:white;
+  background:var(--blue);
+  border-left:5px solid var(--navy);
+  box-shadow:0 8px 20px rgba(23,107,135,.18);
+}
+.award-card .award-title span{
+  display:block;
+  margin-bottom:3px;
+  color:#d9edf4;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.award-card .award-title strong{
+  display:block;
+  font:400 25px/1.15 var(--serif);
+  letter-spacing:.01em;
+}
