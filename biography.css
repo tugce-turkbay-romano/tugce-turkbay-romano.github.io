@@ -922,3 +922,28 @@ img.award-laurel{
   display:inline;
   font:inherit;
 }
+
+/* Precise top alignment for profile highlights */
+.snapshot-grid article,
+.snapshot-grid article:first-child,
+.snapshot-grid .snapshot-teaching,
+.snapshot-grid .snapshot-award{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  min-height:145px;
+  padding:30px 22px;
+}
+.snapshot-grid .snapshot-title{
+  margin:0;
+  line-height:1.1;
+}
+.snapshot-grid .snapshot-teaching .snapshot-title{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+}
+@media(max-width:900px){
+  .snapshot-grid article,
+  .snapshot-grid article:first-child{min-height:120px;padding:26px 20px}
+}
