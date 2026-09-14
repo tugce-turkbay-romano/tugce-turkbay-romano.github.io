@@ -226,3 +226,33 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
   .repairability-figure,
   .modularity-figure{order:2}
 }
+
+/* Match the modularity figure card to the assessment figures */
+.modularity-figure{
+  align-self:start;
+  margin:0;
+  padding:14px;
+  background:white;
+  border:0;
+  box-shadow:none;
+}
+.modularity-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  filter:none;
+}
+.modularity-figure figcaption{
+  margin:0;
+  padding:11px 2px 0;
+  color:#536874;
+  background:white;
+  border-top:0;
+}
+.modularity-figure .figure-display{
+  margin-bottom:7px;
+  color:var(--navy);
+}
+.modularity-figure .figure-attribution{
+  color:#657985;
+}
