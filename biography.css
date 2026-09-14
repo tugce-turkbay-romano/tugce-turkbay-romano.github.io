@@ -698,3 +698,56 @@ blockquote{
   font:400 25px/1.15 var(--serif);
   letter-spacing:.01em;
 }
+
+/* Refined academic-profile hierarchy */
+.snapshot-degree .snapshot-label,
+.snapshot-qualification .snapshot-label{
+  margin:0 0 5px;
+  color:#bfd2dd;
+  font:600 10px/1.2 var(--sans);
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.snapshot-degree strong{font-size:30px}
+.snapshot-qualification .snapshot-middle{
+  margin:0;
+  color:#bfd2dd;
+  font-size:11px;
+}
+.snapshot-qualification strong{
+  margin-top:2px;
+  font-size:22px;
+}
+.snapshot-qualification small{
+  display:block;
+  margin-top:8px;
+  color:#bfd2dd;
+  font-size:10px;
+}
+.snapshot-teaching strong{font-size:38px}
+.snapshot-teaching span{font-size:13px}
+.award-card .award-emphasis{
+  display:block;
+  margin:14px 0 20px;
+  padding:0;
+  color:var(--navy);
+  background:white;
+  border:0;
+}
+.award-card .award-kicker{
+  margin:0;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.1em;
+}
+.award-card .award-emphasis strong{
+  display:inline;
+  color:var(--navy);
+  font:600 14px/1.5 var(--sans);
+}
+.award-card .award-emphasis>span:last-child{
+  display:inline;
+  margin-left:4px;
+  color:var(--muted);
+  font-size:11px;
+}
