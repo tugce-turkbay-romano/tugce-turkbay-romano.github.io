@@ -906,3 +906,19 @@ img.award-laurel{
 @media(max-width:900px){
   .snapshot-grid article{display:grid;grid-template-rows:64px auto}
 }
+
+/* Compact teaching highlight */
+.snapshot-grid .snapshot-teaching{
+  grid-template-rows:auto;
+  align-content:center;
+}
+.snapshot-grid .snapshot-teaching .snapshot-title{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  white-space:nowrap;
+}
+.snapshot-grid .snapshot-teaching .snapshot-title>span{
+  display:inline;
+  font:inherit;
+}
