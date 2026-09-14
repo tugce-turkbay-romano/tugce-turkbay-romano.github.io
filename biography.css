@@ -818,3 +818,10 @@ blockquote{
   .award-card .award-title{padding-right:84px}
   .award-laurel{right:12px;width:60px;height:48px}
 }
+
+/* Use the supplied laurel artwork */
+img.award-laurel{
+  object-fit:contain;
+  filter:grayscale(1) contrast(100) invert(1);
+  mix-blend-mode:screen;
+}
