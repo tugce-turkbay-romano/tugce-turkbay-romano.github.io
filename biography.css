@@ -751,3 +751,18 @@ blockquote{
   color:var(--muted);
   font-size:11px;
 }
+
+/* Match the national qualification title to the award title */
+.national-card h3{
+  margin:0 0 24px;
+  padding:15px 18px;
+  color:white;
+  background:var(--blue);
+  border-left:5px solid var(--navy);
+  box-shadow:0 8px 20px rgba(23,107,135,.18);
+  font-size:25px;
+  line-height:1.18;
+}
+@media(max-width:620px){
+  .national-card h3{padding:14px 16px;font-size:22px}
+}
