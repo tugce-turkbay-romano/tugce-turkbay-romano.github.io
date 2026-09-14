@@ -660,3 +660,17 @@ blockquote{
   .award-card .award-emphasis strong{font-size:52px}
   .award-card h3{font-size:27px}
 }
+
+/* Prominent award title */
+.award-card .card-label{
+  width:max-content;
+  margin-bottom:20px;
+  padding:8px 12px;
+  color:white;
+  background:var(--blue);
+  border-radius:2px;
+  font-size:11px;
+  letter-spacing:.12em;
+  box-shadow:0 6px 16px rgba(23,107,135,.16);
+}
+.award-card .card-label::before{display:none}
