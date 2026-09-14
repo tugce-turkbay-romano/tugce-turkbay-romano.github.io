@@ -84,3 +84,20 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
 .modularity-figure figcaption>span{display:block}
 .modularity-figure .figure-reference{margin-top:7px;color:#bcd0da;font-size:10px;line-height:1.5}
 .modularity-figure .figure-reference a{color:#9ccce5;overflow-wrap:anywhere}
+
+/* Disassemblability research figure */
+.assessment-cards .disassembly-card{grid-column:1/-1;display:block}
+.disassembly-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.disassembly-copy{min-width:0}
+.assessment-cards .disassembly-card h3{min-height:auto}
+.disassembly-figure{margin:0;padding:14px;background:white}
+.disassembly-figure img{display:block;width:100%;height:auto}
+.disassembly-figure figcaption{padding:11px 2px 0;color:#536874;font-size:10px;line-height:1.5}
+.disassembly-figure figcaption strong{color:var(--navy)}
+.disassembly-card>.card-insight{width:100%;max-width:none}
+.assessment-cards .disassembly-card>a{display:inline-block;margin-top:14px;color:#9ccce5;font-size:12px;font-weight:600}
+@media(max-width:900px){
+  .assessment-cards .disassembly-card{grid-column:auto}
+  .disassembly-layout{grid-template-columns:1fr}
+  .disassembly-figure{max-width:720px}
+}
