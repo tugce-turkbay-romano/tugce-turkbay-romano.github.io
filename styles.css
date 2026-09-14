@@ -117,3 +117,47 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
   .repairability-layout{grid-template-columns:1fr}
   .repairability-figure{max-width:720px}
 }
+
+/* Light article summaries paired with figures */
+.disassembly-figure,
+.repairability-figure,
+.modularity-figure{grid-column:1;grid-row:1}
+.disassembly-copy,
+.repairability-copy,
+.modularity-copy{
+  grid-column:2;
+  grid-row:1;
+  padding:24px 26px;
+  color:var(--ink);
+  background:linear-gradient(145deg,#fff 0%,#f2f7fa 100%);
+  border:1px solid #d6e3ea;
+}
+.disassembly-copy h3,
+.repairability-copy h3,
+.modularity-copy h3{color:var(--navy)}
+.disassembly-copy .project-type,
+.repairability-copy .project-type,
+.modularity-copy .project-type{color:var(--blue);font-weight:600}
+.disassembly-copy dl>div,
+.repairability-copy dl>div,
+.modularity-copy dl>div{border-top-color:#d6e3ea}
+.disassembly-copy dt,
+.repairability-copy dt,
+.modularity-copy dt{color:var(--blue)}
+.disassembly-copy dd,
+.repairability-copy dd,
+.modularity-copy dd{color:#4f6572}
+@media(max-width:900px){
+  .disassembly-figure,
+  .repairability-figure,
+  .modularity-figure,
+  .disassembly-copy,
+  .repairability-copy,
+  .modularity-copy{grid-column:auto;grid-row:auto}
+  .disassembly-copy,
+  .repairability-copy,
+  .modularity-copy{order:1}
+  .disassembly-figure,
+  .repairability-figure,
+  .modularity-figure{order:2}
+}
