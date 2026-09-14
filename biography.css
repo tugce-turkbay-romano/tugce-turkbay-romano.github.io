@@ -839,3 +839,14 @@ img.award-laurel{
   color:#bfd2dd;
   font-size:13px;
 }
+
+/* Equalized snapshot typography */
+.snapshot-degree .snapshot-label,
+.snapshot-degree strong{
+  color:white;
+  font:400 30px/1.1 var(--serif);
+  letter-spacing:0;
+  text-transform:none;
+}
+.snapshot-qualification>span,
+.snapshot article:last-child>span{font-size:13px}
