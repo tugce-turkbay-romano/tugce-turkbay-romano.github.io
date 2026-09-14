@@ -825,3 +825,17 @@ img.award-laurel{
   filter:grayscale(1) contrast(100) invert(1);
   mix-blend-mode:screen;
 }
+
+/* Snapshot label refinements */
+.snapshot-degree .snapshot-label{
+  color:white;
+  font:500 18px/1.1 var(--serif);
+  letter-spacing:.02em;
+  text-transform:none;
+}
+.snapshot-qualification strong{font-size:27px}
+.snapshot-qualification>span{
+  margin-top:9px;
+  color:#bfd2dd;
+  font-size:13px;
+}
