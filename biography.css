@@ -802,19 +802,19 @@ blockquote{
 /* White laurel for the thesis-award panel */
 .award-card .award-title{
   position:relative;
-  padding-right:88px;
+  padding-right:108px;
 }
 .award-laurel{
   position:absolute;
   top:50%;
   right:18px;
-  width:54px;
-  height:54px;
+  width:76px;
+  height:60px;
   color:white;
   opacity:.92;
   transform:translateY(-50%);
 }
 @media(max-width:620px){
-  .award-card .award-title{padding-right:70px}
-  .award-laurel{right:14px;width:44px;height:44px}
+  .award-card .award-title{padding-right:84px}
+  .award-laurel{right:12px;width:60px;height:48px}
 }
