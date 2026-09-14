@@ -850,3 +850,8 @@ img.award-laurel{
 }
 .snapshot-qualification>span,
 .snapshot article:last-child>span{font-size:13px}
+
+/* Keep the PhD credential on exactly two lines */
+.snapshot-degree .snapshot-label,
+.snapshot-degree strong{font-size:clamp(24px,2vw,30px)}
+.snapshot-degree strong{white-space:nowrap}
