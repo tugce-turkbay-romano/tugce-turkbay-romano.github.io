@@ -874,3 +874,35 @@ img.award-laurel{
   .snapshot-teaching,
   .snapshot-grid article:last-child{flex-wrap:wrap}
 }
+
+/* Shared two-row alignment for academic highlights */
+.snapshot-grid article{
+  display:grid;
+  grid-template-rows:64px auto;
+  align-content:center;
+  gap:9px;
+}
+.snapshot-grid .snapshot-title{
+  display:block;
+  align-self:start;
+  margin:0;
+  color:white;
+  font:400 27px/1.1 Georgia,"Times New Roman",serif;
+}
+.snapshot-grid .snapshot-title>span{
+  display:block;
+  margin:0;
+  color:inherit;
+  font:inherit;
+}
+.snapshot-grid .snapshot-degree .snapshot-title>span:last-child{white-space:nowrap}
+.snapshot-grid .snapshot-meta{
+  display:block;
+  align-self:start;
+  margin:0;
+  color:#bfd2dd;
+  font:400 13px/1.3 Arial,Helvetica,sans-serif;
+}
+@media(max-width:900px){
+  .snapshot-grid article{display:grid;grid-template-rows:64px auto}
+}
