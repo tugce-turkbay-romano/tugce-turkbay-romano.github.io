@@ -855,3 +855,22 @@ img.award-laurel{
 .snapshot-degree .snapshot-label,
 .snapshot-degree strong{font-size:clamp(24px,2vw,30px)}
 .snapshot-degree strong{white-space:nowrap}
+
+/* Single-line snapshot highlights */
+.snapshot-teaching,
+.snapshot-grid article:last-child{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.snapshot-teaching span,
+.snapshot-grid article:last-child>span{
+  margin-top:0;
+  line-height:1.3;
+}
+.snapshot-grid article:last-child{gap:16px}
+.snapshot-grid article:last-child>strong{white-space:nowrap}
+@media(max-width:900px){
+  .snapshot-teaching,
+  .snapshot-grid article:last-child{flex-wrap:wrap}
+}
