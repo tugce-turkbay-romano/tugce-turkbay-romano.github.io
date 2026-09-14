@@ -101,3 +101,19 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
   .disassembly-layout{grid-template-columns:1fr}
   .disassembly-figure{max-width:720px}
 }
+
+/* Repairability research figure */
+.assessment-cards .repairability-card{grid-column:1/-1;display:block}
+.repairability-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.repairability-copy{min-width:0}
+.assessment-cards .repairability-card h3{min-height:auto}
+.repairability-figure{margin:0;padding:14px;background:white}
+.repairability-figure img{display:block;width:100%;height:auto}
+.repairability-figure figcaption{padding:11px 2px 0;color:#536874;font-size:10px;line-height:1.5}
+.repairability-card>.card-insight{width:100%;max-width:none}
+.assessment-cards .repairability-card>a{display:inline-block;margin-top:14px;color:#9ccce5;font-size:12px;font-weight:600}
+@media(max-width:900px){
+  .assessment-cards .repairability-card{grid-column:auto}
+  .repairability-layout{grid-template-columns:1fr}
+  .repairability-figure{max-width:720px}
+}
