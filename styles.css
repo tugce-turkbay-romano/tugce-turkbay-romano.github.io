@@ -325,3 +325,15 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
   .figure-zoom img,.zoom-hint{transition:none}
   .figure-zoom:hover img{transform:none}
 }
+
+/* Featured circular strategy selection model */
+.assessment-cards .strategy-card{grid-column:1/-1;display:block;min-width:0}
+.assessment-cards .strategy-card h3{min-height:auto;max-width:850px;margin-bottom:14px}
+.strategy-description{max-width:850px;color:#cbd9e0}
+.strategy-actions{margin:20px 0}
+.strategy-frame{display:block;width:100%;height:720px;border:0;border-radius:12px;background:#f4f6f8}
+.secondary-projects{grid-template-columns:1fr}
+@media(max-width:620px){
+  .assessment-cards .strategy-card{padding:20px}
+  .strategy-frame{height:640px}
+}
