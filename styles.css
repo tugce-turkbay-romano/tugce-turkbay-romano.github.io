@@ -337,3 +337,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outl
   .assessment-cards .strategy-card{padding:20px}
   .strategy-frame{height:640px}
 }
+dl.is-collapsed>.card-detail{display:none}
+.details-toggle{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:9px 0;color:#9ccce5;background:none;border:0;border-top:1px solid rgba(255,255,255,.14);width:100%;font:600 12px var(--sans);letter-spacing:.02em;text-align:left;cursor:pointer}
+.details-toggle:hover{color:#fff}.details-toggle:focus-visible{outline:2px solid #9ccce5;outline-offset:3px}
+.details-toggle span{font-size:16px;line-height:1}
