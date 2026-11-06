@@ -954,3 +954,42 @@ footer a:hover{color:#fff}
 
 /* Equal-height recognition header bands */
 .national-card h3,.award-card .award-title{box-sizing:border-box;min-height:84px;display:flex;flex-direction:column;justify-content:center;margin-top:0}
+
+/* Compact layout: balanced type scale and tighter spacing */
+.biography-page{font-size:15px}
+.biography-page .section{padding:64px 0}
+.biography-page .section-heading{margin-bottom:28px}
+.biography-page h2{font-size:clamp(30px,3.2vw,38px);line-height:1.15}
+.biography-page .bio-hero{padding:56px 0 52px}
+.biography-page .bio-hero h1{font-size:clamp(36px,4.2vw,48px);line-height:1.1;margin-bottom:0}
+.biography-page .bio-hero .lead{font-size:19px;line-height:1.55;color:#3f5563}
+.biography-page .cnu-intro{font-size:13px;color:#3f5563}
+.profile-columns{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.profile-panel{padding:26px 28px;background:white;border:1px solid var(--line);border-top:3px solid var(--blue)}
+.panel-head{margin-bottom:6px}
+.panel-head h3{margin:0 0 4px;color:var(--navy);font:400 24px/1.2 var(--serif)}
+.panel-stat{margin:0;color:#3f5563;font-size:13px}
+.panel-stat strong{color:var(--blue);font:400 24px/1 var(--serif);margin-right:4px}
+.profile-list{margin:0}
+.profile-list>div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.profile-list dt{color:var(--blue);font:600 11px/1.6 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.profile-list dd{margin:0;color:#2c4150;font-size:14px;line-height:1.55}
+.biography-page .minimal-publications li{padding:18px 0}
+.biography-page .minimal-publications h3{font-size:21px}
+@media(max-width:900px){.profile-columns{grid-template-columns:1fr}}
+@media(max-width:620px){.profile-list>div{grid-template-columns:1fr;gap:2px}.profile-panel{padding:20px}.biography-page .section{padding:48px 0}}
+
+/* Journal and DOI on one line */
+.minimal-publications .pub-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.minimal-publications .pub-meta a{margin-top:0}
+.minimal-publications .pub-meta a::before{content:"·";margin-right:14px;color:var(--muted);font-weight:400}
+
+/* Slimmer highlight band and tighter section rhythm */
+.snapshot .snapshot-grid article{min-height:0;padding-top:20px;padding-bottom:20px}
+.biography-page .section{padding:44px 0}
+.biography-page .section-heading{margin-bottom:22px}
+.biography-page .bio-hero{padding:48px 0 44px}
+@media(max-width:620px){.snapshot .snapshot-grid article{padding-top:14px;padding-bottom:14px}.biography-page .section{padding:36px 0}}
+/* Alternating section backgrounds: white / tinted / white */
+.biography-page #teaching{background:#e8f0f5;border-block:1px solid #d3e1ea}
+.biography-page #publications{background:white}
