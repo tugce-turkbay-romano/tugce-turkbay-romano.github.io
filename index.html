@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261106-5">
+  <link rel="stylesheet" href="styles.css?v=20261106-9">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tugce Turkbay-Romano","url":"https://tugce-turkbay-romano.github.io/","image":"https://tugce-turkbay-romano.github.io/assets/profile-ttr2-web.jpg","jobTitle":"Circular Economy & Sustainable Electronics Researcher","alumniOf":{"@type":"CollegeOrUniversity","name":"Université Grenoble Alpes"},"knowsAbout":["Circularity indicators","Sustainability performance","Repairability","Life cycle assessment","Decision support","Product circularity","Eco-design"]}</script>
 </head>
 <body>
@@ -29,10 +29,10 @@
 </header>
 
 <main id="main">
-  <section id="top" class="hero">
+  <section id="top" class="hero hero-dark">
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Making circularity measurable, actionable and practical.</p>
+        <p class="eyebrow">Circular economy · Sustainable electronics</p>
         <h1>Making circularity measurable, actionable and practical</h1>
         <p class="hero-contribution">I develop indicators and decision-support methods that translate engineering data on repairability, disassembly, lifetime and residual value into actionable circular strategies and measurable sustainability performance.</p>
         <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my research</a><a class="button button-secondary" href="biography.html#publications">View publications</a><a class="button button-secondary unavailable" href="#" aria-disabled="true" title="CV will be available soon">Download CV</a></div>
@@ -49,14 +49,15 @@
     </div>
   </section>
 
-  <section class="pillars" aria-label="Research contribution sequence">
+  <section class="pillars pillars-dark" aria-label="Research contribution sequence">
     <div class="shell contribution-flow"><span>Engineering data</span><i>→</i><span>Validated indicators</span><i>→</i><span>Organizational decisions</span><i>→</i><span>Measured performance</span></div>
   </section>
 
-  <section id="projects" class="section soft projects-light">
+  <section id="projects" class="section projects-light projects-editorial projects-showcase">
     <div class="shell">
-      <header class="section-heading"><div><p class="eyebrow">01 · Projects &amp; evidence</p><h2>Selected research and assessment methods</h2></div></header>
+      <header class="section-heading"><div><p class="eyebrow">01 · Projects &amp; evidence</p><h2>Selected research and assessment methods</h2></div><div class="projects-intro"><p>Four published studies that turn product-level engineering evidence into assessment methods for circular electronics.</p></div></header>
       <div class="assessment-cards">
+        <nav class="showcase-nav" aria-label="Select a project"><a href="#project-disassembly" data-target="project-disassembly"><span class="sn-num">01</span><span class="sn-type">Disassemblability</span><span class="sn-title">Disassemblability Index for PCB-Based Electronic Circuits</span><span class="sn-meta">Sustainability · 2024</span></a><a href="#project-repairability" data-target="project-repairability"><span class="sn-num">02</span><span class="sn-type">Repairability</span><span class="sn-title">Repairability Index for PCB-Based Electronic Circuits</span><span class="sn-meta">Journal of Remanufacturing · 2026</span></a><a href="#project-modularity" data-target="project-modularity"><span class="sn-num">03</span><span class="sn-type">Circular modularity</span><span class="sn-title">Modularity Concept for PCB-Based Electronic Circuits</span><span class="sn-meta">Procedia CIRP · 2023</span></a><a href="#project-data" data-target="project-data"><span class="sn-num">04</span><span class="sn-type">Data for circular decisions</span><span class="sn-title">Data Requirements for R-Strategy Decisions on End-of-Use Electronics</span><span class="sn-meta">Sustainability · 2026</span></a></nav>
         <!-- Temporarily hidden strategy selection project.
 <article class="strategy-card">
           <p class="project-type">Strategy selection</p>
@@ -66,11 +67,10 @@
           <iframe class="strategy-frame" src="assets/strategy-selection.html" title="Circular Economy Strategy Selection interactive model" loading="lazy"></iframe>
         </article>
         -->
-        <article class="disassembly-card">
+        <article id="project-disassembly" class="disassembly-card">
+          <header class="project-head"><div class="project-title-block"><p class="project-type">Disassemblability assessment</p><h3>Disassemblability Index for PCB-Based Electronic Circuits</h3><p class="project-meta">Sustainability · 2024</p></div><p class="card-insight">The method adapts eDiM to PCB-level operations so designers can formulate measurable disassemblability requirements.</p></header>
           <div class="disassembly-layout">
             <div class="disassembly-copy">
-              <p class="project-type">Disassemblability assessment</p>
-              <h3>Disassemblability Index for PCB-Based Electronic Circuits</h3>
               <dl>
                 <div><dt>Problem</dt><dd>Existing disassembly metrics do not adequately capture PCB-level operations, including component removal and desoldering.</dd></div>
                 <div><dt>Method</dt><dd>Experimental disassembly analysis and adaptation of the ease of Disassembly Metric (eDiM) to PCB-based power electronic converters.</dd></div>
@@ -84,14 +84,12 @@
               <figcaption><span class="figure-display"><strong>Disassemblability:</strong> <em>PCB-Level Disassembly Assessment</em></span><span class="figure-attribution">UPS casing and ECs disassembly sequence with eDiM scope. Reproduced from Turkbay Romano et al. (2024), <em>Disassemblability Assessment of Power Electronic Converters for Improved Circularity</em>, under the CC BY 4.0 licence.</span></figcaption>
             </figure>
           </div>
-          <p class="card-insight">The method adapts eDiM to PCB-level operations so designers can formulate measurable disassemblability requirements.</p>
           <a href="https://www.mdpi.com/2071-1050/16/11/4712" target="_blank" rel="noopener noreferrer">View published research ↗</a>
         </article>
-        <article class="repairability-card">
+        <article id="project-repairability" class="repairability-card">
+          <header class="project-head"><div class="project-title-block"><p class="project-type">Repairability assessment</p><h3>Repairability Index for PCB-Based Electronic Circuits</h3><p class="project-meta">Journal of Remanufacturing · 2026</p></div><p class="card-insight">Five criteria—traceability, design features, disassembly/reassembly, diagnostics and spare parts—are complemented by warning indicators for critical barriers.</p></header>
           <div class="repairability-layout">
             <div class="repairability-copy">
-              <p class="project-type">Repairability assessment</p>
-              <h3>Repairability Index for PCB-Based Electronic Circuits</h3>
               <dl>
                 <div><dt>Problem</dt><dd>Aggregated repairability scores can conceal critical repair barriers and commonly treat the PCB as a replaceable unit rather than a repairable system.</dd></div>
                 <div><dt>Method</dt><dd>Repair-workflow modelling, analysis of existing indices, interviews with eight repair experts and a weighting survey involving 50 electronics and eco-design experts.</dd></div>
@@ -105,14 +103,12 @@
               <figcaption><span class="figure-display"><strong>Repairability:</strong> <em>RI-PCB: From Repair Assessment to Eco-Design Feedback</em></span><span class="figure-attribution">Reproduced from Turkbay-Romano et al. (2026), <em>Developing a technically useful repairability index for general-purpose PCB electronic circuits</em>, under the CC BY 4.0 licence.</span></figcaption>
             </figure>
           </div>
-          <p class="card-insight">Five criteria—traceability, design features, disassembly/reassembly, diagnostics and spare parts—are complemented by warning indicators for critical barriers.</p>
           <a href="https://link.springer.com/article/10.1007/s13243-026-00165-2" target="_blank" rel="noopener noreferrer">View published research ↗</a>
         </article>
-        <article class="modularity-card">
+        <article id="project-modularity" class="modularity-card">
+          <header class="project-head"><div class="project-title-block"><p class="project-type">Circular modularity</p><h3>Modularity Concept for PCB-Based Electronic Circuits</h3><p class="project-meta">Procedia CIRP · 2023</p></div><p class="card-insight modularity-takeaway"><strong>Circular modularity requires more than modular circuit topology:</strong> modules should also be structurally separable and designed around their intended end-of-life strategy.</p></header>
           <div class="modularity-layout">
             <div class="modularity-copy">
-              <p class="project-type">Circular modularity</p>
-          <h3>Modularity Concept for PCB-Based Electronic Circuits</h3>
           <dl>
             <div><dt>Problem</dt><dd>Power-electronic modularity is often driven by topology and performance, not structural needs for repair, reuse, upgrade and recycling.</dd></div>
             <div><dt>Method</dt><dd>Conceptual review of functional and structural modularity across four converter architectures: PEBB, MIC, MMC and PCA.</dd></div>
@@ -126,14 +122,12 @@
               <figcaption><span class="figure-display"><strong>Modularity:</strong> <em>Circular Modularity for Electronics</em></span><span class="figure-attribution">Modularity characteristics. Reproduced from Turkbay Romano et al. (2023), <em>Towards circular power electronics in the perspective of modularity</em>, under the CC BY-NC-ND 4.0 licence.</span></figcaption>
             </figure>
           </div>
-          <p class="card-insight modularity-takeaway"><strong>Circular modularity requires more than modular circuit topology:</strong> modules should also be structurally separable and designed around their intended end-of-life strategy.</p>
           <a class="modularity-source" href="https://doi.org/10.1016/j.procir.2023.02.099" target="_blank" rel="noopener noreferrer">View published research ↗</a>
         </article>
-        <article class="repairability-card data-card">
+        <article id="project-data" class="repairability-card data-card">
+          <header class="project-head"><div class="project-title-block"><p class="project-type">Data for circular decisions</p><h3>Data Requirements for R-Strategy Decisions on End-of-Use Electronics</h3><p class="project-meta">Sustainability · 2026</p></div><p class="card-insight">Accessibility drops as the assessment moves from identification and compliance toward lifetime, testing and diagnostic evidence; missing Mandatory data leaves decisions unresolved rather than proving a strategy infeasible.</p></header>
           <div class="repairability-layout">
             <div class="repairability-copy">
-              <p class="project-type">Data for circular decisions</p>
-              <h3>Data Requirements for R-Strategy Decisions on End-of-Use Electronics</h3>
               <dl>
                 <div><dt>Problem</dt><dd>Choosing between reuse, repair, refurbishment, remanufacturing, repurposing, component reuse and recycling requires product information, yet it is often unclear which data are needed, where they come from and how they are used.</dd></div>
                 <div><dt>Method</dt><dd>An end-of-use decision-tree framework, formalized with IDEF0 and GRAI Net models, used to trace the data required at each activity and decision point, cross-referenced with literature indicators of availability, importance and sensitivity.</dd></div>
@@ -152,7 +146,6 @@
               <figcaption><span class="figure-attribution">Selected data categories and their case-study accessibility for four end-of-use laptop adapters, adapted from Tables 3–5 of Turkbay-Romano et al. (2026), <em>Supporting Circular Economy Strategies in Electronics: Data Characterization for R-Strategy Decision Making</em>.</span></figcaption>
             </figure>
           </div>
-          <p class="card-insight">Accessibility drops as the assessment moves from identification and compliance toward lifetime, testing and diagnostic evidence; missing Mandatory data leaves decisions unresolved rather than proving a strategy infeasible.</p>
           <a href="https://www.mdpi.com/2071-1050/18/21/11041" target="_blank" rel="noopener noreferrer">View published research ↗</a>
         </article>
       </div>
@@ -175,5 +168,6 @@
 </main>
 <footer><div class="shell"><strong>Tugce Turkbay-Romano</strong><p>© <span id="year"></span> · Circular Economy &amp; Sustainable Electronics Researcher</p><a href="#top">Back to top ↑</a></div></footer>
 <script src="script.js?v=20261106-1"></script>
+<script>(()=>{const nav=document.querySelector(".showcase-nav");if(!nav)return;const wrap=nav.parentElement;wrap.classList.add("is-js");const links=[...nav.querySelectorAll("a")];const show=id=>{links.forEach(l=>{const on=l.dataset.target===id;l.classList.toggle("is-active",on);l.setAttribute("aria-current",on?"true":"false")});wrap.querySelectorAll(":scope>article").forEach(a=>a.classList.toggle("is-active",a.id===id))};links.forEach(l=>l.addEventListener("click",e=>{e.preventDefault();show(l.dataset.target);if(innerWidth<901)document.getElementById(l.dataset.target).scrollIntoView({behavior:"smooth",block:"start"})}));show(links[0].dataset.target)})();</script>
 </body>
 </html>
