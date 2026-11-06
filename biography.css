@@ -3,8 +3,8 @@
    ========================= */
 
 :root{
-  --navy:#102a43;
-  --blue:#176b87;
+  --navy:#112b3b;
+  --blue:#2d7199;
   --soft:#f5f8fa;
   --line:#dbe3e8;
   --muted:#60717d;
@@ -593,7 +593,7 @@ blockquote{
   position:absolute;
   inset:0 auto 0 0;
   width:5px;
-  background:linear-gradient(180deg,var(--blue),#69abc4);
+  background:linear-gradient(180deg,var(--blue),#7fb0cc);
 }
 .award-card .card-label{
   display:inline-flex;
@@ -619,7 +619,7 @@ blockquote{
   margin:20px 0 24px;
   padding:22px 24px;
   color:white;
-  background:linear-gradient(125deg,var(--navy),#17465e);
+  background:linear-gradient(125deg,var(--navy),#183b50);
   border:0;
 }
 .award-card .award-kicker{
@@ -671,7 +671,7 @@ blockquote{
   border-radius:2px;
   font-size:11px;
   letter-spacing:.12em;
-  box-shadow:0 6px 16px rgba(23,107,135,.16);
+  box-shadow:0 6px 16px rgba(45,113,153,.16);
 }
 .award-card .card-label::before{display:none}
 
@@ -682,7 +682,7 @@ blockquote{
   color:white;
   background:var(--blue);
   border-left:5px solid var(--navy);
-  box-shadow:0 8px 20px rgba(23,107,135,.18);
+  box-shadow:0 8px 20px rgba(45,113,153,.18);
 }
 .award-card .award-title span{
   display:block;
@@ -759,7 +759,7 @@ blockquote{
   color:white;
   background:var(--blue);
   border-left:5px solid var(--navy);
-  box-shadow:0 8px 20px rgba(23,107,135,.18);
+  box-shadow:0 8px 20px rgba(45,113,153,.18);
   font-size:25px;
   line-height:1.18;
 }
@@ -947,3 +947,7 @@ img.award-laurel{
   .snapshot-grid article,
   .snapshot-grid article:first-child{min-height:120px;padding:26px 20px}
 }
+
+/* Readable footer link on dark background */
+footer a{color:#9ccce5}
+footer a:hover{color:#fff}
