@@ -951,3 +951,6 @@ img.award-laurel{
 /* Readable footer link on dark background */
 footer a{color:#9ccce5}
 footer a:hover{color:#fff}
+
+/* Equal-height recognition header bands */
+.national-card h3,.award-card .award-title{box-sizing:border-box;min-height:84px;display:flex;flex-direction:column;justify-content:center;margin-top:0}
