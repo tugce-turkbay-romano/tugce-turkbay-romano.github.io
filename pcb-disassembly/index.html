@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>PCB Disassembly | Tugce Turkbay-Romano</title><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a1014'/><rect x='9' y='9' width='14' height='14' rx='2' fill='none' stroke='%237fdca4' stroke-width='2'/></svg>"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0a1014; --ink: #eef3f4; --soft: #9fb1ba; --accent: #7fdca4; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: "DM Sans", Arial, sans-serif; }
+  .gate { min-height: 100svh; display: grid; place-items: center; padding: 24px 16px; }
+  .gate__box { width: min(100%, 26rem); }
+  .gate__label { font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0; }
+  .gate h1 { font: 400 clamp(2.4rem, 7vw, 3.4rem)/1 "Newsreader", Georgia, serif; letter-spacing: -.03em; margin: 14px 0 12px; }
+  .gate p.note { color: var(--soft); font-size: 14px; line-height: 1.55; margin: 0 0 28px; }
+  .gate label { display: block; font-size: 13px; color: var(--soft); margin-bottom: 8px; }
+  .gate__row { display: flex; gap: 8px; }
+  .gate input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: #111a20; border: 1px solid #2a3a44; border-radius: 6px; padding: 12px 14px; }
+  .gate input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .gate button { font: inherit; font-size: 15px; font-weight: 600; color: var(--bg); background: var(--accent); border: 0; border-radius: 6px; padding: 0 20px; cursor: pointer; }
+  .gate button:disabled { opacity: .6; cursor: progress; }
+  .gate__msg { min-height: 1.5em; margin: 12px 0 0; font-size: 13px; color: var(--soft); }
+  .gate__msg.err { color: #ff8a7a; }
+  .gate__bar { height: 2px; background: #1c2a32; margin-top: 10px; overflow: hidden; border-radius: 2px; visibility: hidden; }
+  .gate__bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 200ms ease; }
+  .gate__back { display: inline-block; margin-top: 36px; color: var(--soft); font-size: 13px; text-decoration: none; }
+  .gate__back:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+<main class="gate" id="gate">
+  <div class="gate__box">
+    <p class="gate__label">Protected page</p>
+    <h1>PCB Disassembly</h1>
+    <p class="note">The experimental disassembly behind the eDiM study, recorded at the bench. Enter the password to continue.</p>
+    <form id="f" autocomplete="off">
+      <label for="pw">Password</label>
+      <div class="gate__row">
+        <input id="pw" name="pw" type="password" required autofocus>
+        <button id="go" type="submit">Open</button>
+      </div>
+      <div class="gate__bar" id="bar"><i></i></div>
+      <p class="gate__msg" id="msg" role="status" aria-live="polite"></p>
+    </form>
+    <a class="gate__back" href="../#projects">&larr; Back to the portfolio</a>
+  </div>
+</main>
+<script>
+(function () {
+  var SALT = 'w4TaQIFq9ZZrLy9vdKloxw==', ITER = 310000;
+  var f = document.getElementById('f'), pw = document.getElementById('pw'), go = document.getElementById('go');
+  var msg = document.getElementById('msg'), bar = document.getElementById('bar');
+  var b64 = function (s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); };
+  var mobile = matchMedia('(hover: none) and (pointer: coarse)').matches || matchMedia('(max-width: 860px)').matches;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function say(t, err) { msg.textContent = t; msg.className = 'gate__msg' + (err ? ' err' : ''); }
+  async function getBin(url) { var r = await fetch(url, { cache: 'force-cache' }); if (!r.ok) throw new Error('fetch ' + url); return new Uint8Array(await r.arrayBuffer()); }
+  async function dec(key, buf) { return crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, key, buf.slice(12)); }
+  function load(src) { return new Promise(function (ok, no) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = no; document.body.appendChild(s); }); }
+  function css(href) { return new Promise(function (ok) { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; l.onload = ok; l.onerror = ok; document.head.appendChild(l); }); }
+
+  f.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (location.protocol === 'file:') { say('This page only opens once it is published on the website. Opened as a file from your computer, the browser blocks it.', true); return; }
+    go.disabled = true; say('Checking…');
+    var key, raw;
+    try { raw = await getBin('p.bin'); } catch (err) { go.disabled = false; say('Could not load the page. Please try again.', true); return; }
+    try {
+      var base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw.value), 'PBKDF2', false, ['deriveKey']);
+      key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(SALT), iterations: ITER, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      var payload = JSON.parse(new TextDecoder().decode(await dec(key, raw)));
+    } catch (err) {
+      go.disabled = false; say(window.crypto && crypto.subtle ? 'Incorrect password.' : 'This browser cannot open protected pages.', true);
+      pw.select(); return;
+    }
+    try {
+      var refs = Object.keys(payload.map).filter(function (r) {
+        if (/\.mp4$/.test(r)) {
+          if (reduce) return false;
+          if (/\/(work|peak)\.mp4$/.test(r)) return !mobile;
+          if (/-m\.mp4$/.test(r)) return mobile;
+        }
+        return true;
+      });
+      var done = 0; bar.style.visibility = 'visible'; say('Opening…');
+      var urls = {};
+      await Promise.all(refs.map(async function (r) {
+        var m = payload.map[r];
+        var plain = await dec(key, await getBin('a/' + m.id + '.bin'));
+        urls[r] = URL.createObjectURL(new Blob([plain], { type: m.type }));
+        done++; bar.firstChild.style.width = Math.round(done / refs.length * 100) + '%';
+      }));
+      var html = payload.html;
+      Object.keys(urls).forEach(function (r) { html = html.split(r).join(urls[r]); });
+      await css('scrollcraft.css');
+      document.getElementById('gate').remove();
+      document.body.insertAdjacentHTML('afterbegin', html);
+      window.scrollTo(0, 0);
+      await load('scrollcraft.js');
+      ScrollCraft.mount(document.body);
+      await load('page.js');
+    } catch (err) {
+      go.disabled = false; say('Could not load the page. Please try again.', true);
+    }
+  });
+})();
+</script>
+</body>
+</html>
