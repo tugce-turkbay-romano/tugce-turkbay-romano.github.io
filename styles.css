@@ -644,3 +644,52 @@ dl.is-collapsed>.card-detail{display:none}
 .lc-link .lk-drop::after{border-top-color:#3d4a52}
 .lc-stage:not(:last-child)::after{background:#a9b1b6}
 .lc-stage:not(:last-child)::before{border-left-color:#a9b1b6}
+
+/* ===== Life-cycle animation ===== */
+.projects-editorial .section-heading{grid-template-columns:1fr}
+@media (prefers-reduced-motion:no-preference){
+.lc-diagram .lc-stage,.lc-diagram .lc-rowlabel{opacity:0;transform:translateY(14px)}
+.lc-diagram .lc-link span{transform:scale(0)}
+.lc-diagram .lc-link .lk-down{transform-origin:top}
+.lc-diagram .lc-link .lk-across{transform-origin:right}
+.lc-diagram .lc-link .lk-drop{transform-origin:top}
+.lc-animate .lc-stage,.lc-animate .lc-rowlabel{animation:lcIn .55s cubic-bezier(.2,.7,.2,1) forwards}
+.lc-animate .lc-link .lk-down{animation:lcDrawY .3s ease-out 2.05s forwards}
+.lc-animate .lc-link .lk-across{animation:lcDrawX .5s ease-out 2.35s forwards}
+.lc-animate .lc-link .lk-drop{animation:lcDrawY .3s ease-out 2.85s forwards}
+@keyframes lcIn{to{opacity:1;transform:none}}
+@keyframes lcDrawX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes lcDrawY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.lc-animate .lc-tile{animation:lcPulse 9s ease-in-out infinite}
+@keyframes lcPulse{0%,7%,100%{transform:none;box-shadow:none}3%{transform:translateY(-4px) scale(1.06);box-shadow:0 0 0 5px rgba(242,193,78,.55),0 10px 22px rgba(0,0,0,.18)}}
+
+.lc-animate .lc-life1 .lc-stage:nth-child(1){animation-delay:0.15s}
+.lc-animate .lc-life1 .lc-stage:nth-child(1) .lc-tile{animation-delay:3.60s}
+.lc-animate .lc-life1 .lc-stage:nth-child(2){animation-delay:0.40s}
+.lc-animate .lc-life1 .lc-stage:nth-child(2) .lc-tile{animation-delay:4.05s}
+.lc-animate .lc-life1 .lc-stage:nth-child(3){animation-delay:0.65s}
+.lc-animate .lc-life1 .lc-stage:nth-child(3) .lc-tile{animation-delay:4.50s}
+.lc-animate .lc-life1 .lc-stage:nth-child(4){animation-delay:0.90s}
+.lc-animate .lc-life1 .lc-stage:nth-child(4) .lc-tile{animation-delay:4.95s}
+.lc-animate .lc-life1 .lc-stage:nth-child(5){animation-delay:1.15s}
+.lc-animate .lc-life1 .lc-stage:nth-child(5) .lc-tile{animation-delay:5.40s}
+.lc-animate .lc-life1 .lc-stage:nth-child(6){animation-delay:1.40s}
+.lc-animate .lc-life1 .lc-stage:nth-child(6) .lc-tile{animation-delay:5.85s}
+.lc-animate .lc-life1 .lc-stage:nth-child(7){animation-delay:1.65s}
+.lc-animate .lc-life1 .lc-stage:nth-child(7) .lc-tile{animation-delay:6.30s}
+.lc-animate .lc-life2 .lc-stage:nth-child(1){animation-delay:3.10s}
+.lc-animate .lc-life2 .lc-stage:nth-child(1) .lc-tile{animation-delay:7.15s}
+.lc-animate .lc-life2 .lc-stage:nth-child(2){animation-delay:3.22s}
+.lc-animate .lc-life2 .lc-stage:nth-child(2) .lc-tile{animation-delay:7.60s}
+.lc-animate .lc-life2 .lc-stage:nth-child(3){animation-delay:3.34s}
+.lc-animate .lc-life2 .lc-stage:nth-child(3) .lc-tile{animation-delay:8.05s}
+.lc-animate .lc-life2 .lc-stage:nth-child(4){animation-delay:3.46s}
+.lc-animate .lc-life2 .lc-stage:nth-child(4) .lc-tile{animation-delay:8.50s}
+.lc-animate .lc-life2 .lc-stage:nth-child(5){animation-delay:3.58s}
+.lc-animate .lc-life2 .lc-stage:nth-child(5) .lc-tile{animation-delay:8.95s}
+.lc-animate .lc-life2 .lc-stage:nth-child(6){animation-delay:3.70s}
+.lc-animate .lc-life2 .lc-stage:nth-child(6) .lc-tile{animation-delay:9.40s}
+.lc-animate .lc-life2 .lc-stage:nth-child(7){animation-delay:3.82s}
+.lc-animate .lc-life2 .lc-stage:nth-child(7) .lc-tile{animation-delay:9.85s}
+.lc-animate .lc-life1 .lc-rowlabel{animation-delay:0s}.lc-animate .lc-life2 .lc-rowlabel{animation-delay:3s}
+}
