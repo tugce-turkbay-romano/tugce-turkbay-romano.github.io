@@ -611,3 +611,36 @@ dl.is-collapsed>.card-detail{display:none}
 .lc-link .lk-across{left:calc(var(--lbl) + (100% - var(--lbl) - 18px) / 14);right:calc(100% - var(--lbl) - (100% - var(--lbl) - 18px) * 11 / 14 - 2px)}
 .lc-link .lk-drop{left:calc(var(--lbl) + (100% - var(--lbl) - 18px) / 14)}
 .showcase-nav .lc-pin{flex:none!important;display:inline-flex!important;grid-template-columns:none;padding:4px 10px 4px 4px!important;border-width:1.5px!important}
+
+/* Palette D: light, line-drawn */
+.lc-life1{background:#f6f9fb}.lc-life2{background:#eef4f8}
+.lc-life1 .lc-tile{background:white;border:2px solid #2d7199}.lc-life1 .lc-ico{stroke:#2d7199}
+.lc-life2 .lc-tile{background:#2d7199}
+.lc-stage.is-eol .lc-tile{border-style:dashed}
+.lc-link{background:linear-gradient(90deg,#f6f9fb,#eef4f8)}
+/* Study pins: text only, accent colour */
+.showcase-nav .lc-pin{--pin:#112b3b;--pin-dark:#0b1d28;padding:7px 14px!important;color:white;background:var(--pin);border-color:var(--pin)!important;font-size:11.5px}
+.showcase-nav .lc-pin:hover{background:var(--pin-dark)}
+.showcase-nav .lc-pin.is-active{color:white;background:var(--pin-dark);border-color:var(--pin-dark)!important;box-shadow:0 0 0 4px white,0 0 0 6px var(--pin)}
+/* Gold study buttons */
+.showcase-nav .lc-pin{--pin:#f2c14e;--pin-dark:#e0a526}
+.showcase-nav .lc-pin,.showcase-nav .lc-pin:hover,.showcase-nav .lc-pin.is-active{color:#112b3b}
+/* Second life: emerald green */
+.lc-life2{background:#ecf6f2}
+.lc-life2 .lc-tile{background:#1f8a6d}
+.lc-link{background:linear-gradient(90deg,#f6f9fb,#ecf6f2)}
+.lc-life2 .lc-stage.is-eol .lc-tile{background:white;border-color:#1f8a6d}
+.lc-life2 .lc-stage.is-eol .lc-ico{stroke:#1f8a6d}
+/* First life: anthracite, no blue */
+.lc-life1{background:#f2f3f4}
+.lc-life1 .lc-tile{background:#3d4a52;border-color:#3d4a52}
+.lc-life1 .lc-ico{stroke:white}
+.lc-life1 .lc-stage.is-eol .lc-tile{background:white;border-color:#3d4a52}
+.lc-life1 .lc-stage.is-eol .lc-ico{stroke:#3d4a52}
+.lc-life1 .lc-stage.is-eou .lc-tile,.lc-stage.is-eou:has(.lc-pin.is-active) .lc-tile{box-shadow:0 0 0 4px white,0 0 0 6px #3d4a52}
+.lc-life1 .lc-stage.is-eou .lc-name{color:#3d4a52}
+.lc-link{background:linear-gradient(90deg,#f2f3f4,#ecf6f2)}
+.lc-link span{background:#3d4a52}
+.lc-link .lk-drop::after{border-top-color:#3d4a52}
+.lc-stage:not(:last-child)::after{background:#a9b1b6}
+.lc-stage:not(:last-child)::before{border-left-color:#a9b1b6}
