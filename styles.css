@@ -37,7 +37,7 @@
 .agenda-steps article{min-height:225px}.agenda-steps h3{margin-top:34px}.agenda-methods{margin-top:18px;padding:24px;background:white;border:1px solid var(--line)}.agenda-methods p:last-child{margin:0;color:var(--muted)}
 
 /* Biography page and homepage academic-profile preview */
-a:focus-visible,button:focus-visible{outline:3px solid rgba(45,113,153,.35);outline-offset:4px}.site-nav a.active{color:var(--blue);font-weight:600}.site-nav a.active::after{content:"";display:block;height:1px;margin-top:4px;background:var(--blue)}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #0b3a57;outline-offset:2px;box-shadow:0 0 0 2px #fff}.site-nav a.active{color:var(--blue);font-weight:600}.site-nav a.active::after{content:"";display:block;height:1px;margin-top:4px;background:var(--blue)}
 .academic-preview{border-top:1px solid var(--line)}.preview-layout{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:60px}.preview-layout>div:last-child>p{max-width:560px;color:var(--muted)}.preview-layout .text-button{margin-top:8px}
 .bio-hero{padding:clamp(74px,8vw,112px) 0;background:linear-gradient(100deg,#fff 0%,#fff 55%,var(--blue-soft) 100%);border-bottom:1px solid var(--line)}.bio-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:end;gap:72px}.bio-hero h1{max-width:650px;margin:0;font-size:clamp(48px,5.5vw,76px)}.bio-hero .lead{margin-bottom:18px}.compact-expertise{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.compact-expertise article{padding:27px;background:white}.compact-expertise h3{margin-bottom:13px;font:400 24px var(--serif)}.compact-expertise p{margin:0;color:var(--muted);font-size:13px}
 @media(max-width:900px){.preview-layout,.bio-hero-grid{grid-template-columns:1fr;gap:30px}.compact-expertise{grid-template-columns:1fr}.biography-page .site-nav a.active::after{display:none}}
@@ -677,3 +677,24 @@ dl.is-collapsed>.card-detail{display:none}
 .lc-animate .lc-life2 .lc-stage:nth-child(7){animation-delay:3.82s}
 .lc-animate .lc-life1 .lc-rowlabel{animation-delay:0s}.lc-animate .lc-life2 .lc-rowlabel{animation-delay:3s}
 }
+
+/* ===== Accessibility fixes (Nov 2026) ===== */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* One solid, dark focus ring everywhere; the white inner ring keeps it visible on dark backgrounds */
+.figure-zoom:focus-visible,.details-toggle:focus-visible,.daisy .petal:focus-visible,.showcase-nav .lc-pin:focus-visible{outline:3px solid #0b3a57;outline-offset:2px;box-shadow:0 0 0 2px #fff}
+.pillars-dark a:focus-visible,.pillars-dark button:focus-visible,.dark a:focus-visible,.dark button:focus-visible,.figure-lightbox button:focus-visible{outline-color:#fff;box-shadow:0 0 0 2px #0b3a57}
+/* Instruction above the diagram: readable size, full contrast, not italic */
+.lc-hint{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 16px;color:var(--ink);font-size:15px;font-weight:500;line-height:1.4}
+.lc-hint-count{padding:3px 10px;color:#112b3b;background:#f2c14e;border-radius:999px;font-size:13px;font-weight:700}
+.lc-swipe-hint{display:none;margin:-8px 0 12px;color:var(--ink);font-size:14px}
+@media(max-width:900px){.lc-swipe-hint{display:block}}
+/* Reprocess / Recycle sub-labels: larger, upright, darker */
+.lc-sub{max-width:150px;color:#2f3b42;font-size:12px;font-style:normal;line-height:1.4}
+/* Study tags read as buttons: arrow, raised edge, pointer */
+.showcase-nav .lc-pin{gap:6px;cursor:pointer;box-shadow:0 2px 0 #b8871a;font-size:12.5px}
+.lc-pin-arrow{font-weight:700;transition:transform .2s}
+.showcase-nav .lc-pin:hover{box-shadow:0 3px 0 #b8871a,0 6px 14px rgba(17,43,59,.16)}
+.showcase-nav .lc-pin:hover .lc-pin-arrow{transform:translateX(2px)}
+.showcase-nav .lc-pin.is-active{box-shadow:0 0 0 3px #fff,0 0 0 5px #112b3b}
+.showcase-nav .lc-pin.is-active .lc-pin-arrow{transform:rotate(90deg)}
+.showcase-nav .lc-pin.is-active:focus-visible{box-shadow:0 0 0 2px #fff}
